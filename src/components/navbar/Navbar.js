@@ -38,8 +38,8 @@ const Navbar = () => {
                     <li onClick={hideMenu}><a href="#">Home</a></li>
                     <li onClick={hideMenu}><a href="#">Features</a></li>
                     <li onClick={hideMenu}><a href="#">Download</a></li>
-                    {/* When click settings, we need to show submenu */}
-                    <li className='submenu-link' >
+                    {/* When click settings, we need to show submenu. Must use arrow function, cannot call setter function directly, bc it will run on pageload (or else get an infinite loop errror) */}
+                    <li className='submenu-link' onClick={() => setShowSubmenu(true)}>
                         <a href="#">Settings</a>
                         <AiOutlineArrowRight color="fff" size={18} />
                     </li>
@@ -50,8 +50,8 @@ const Navbar = () => {
                 {/* SUBMENU JSX */}
                 <ul className='nav-links submenu' id={showSubmenu ? "submenu-nav-links" : "hide-submenu-nav-links"}>
                     <li className='submenu-link'>
-                        <a href="#">Back to Menu</a>
                         <AiOutlineArrowLeft color="fff" size={18} />
+                        <a href="#">Back to Menu</a>
                     </li>
                     <li onClick={hideMenu}><a href="#">Profile Settings</a></li>
                     <li onClick={hideMenu}><a href="#">Account Settings</a></li>

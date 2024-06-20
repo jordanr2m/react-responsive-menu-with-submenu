@@ -80,6 +80,26 @@ a.btn-orange:hover {
     }
 }
 
+/* ===== SUBMENU STYLES FOR DESKTOP ===== */
+/* Settings Link */
+li.submenu-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.submenu-link a {
+    padding: 0 2px;
+}
+
+/* Keep styles for shown and hidden the same. Only difference is the position  */
+.navbar #submenu-nav-links,
+.navbar #hide-submenu-nav-links {
+
+}
+
+
 /* Media query for mobile width */
 @media screen and (max-width: 600px) {
     .nav-btn {
