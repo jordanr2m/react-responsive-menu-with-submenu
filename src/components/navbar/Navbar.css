@@ -1,0 +1,151 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.logo-text span {
+    font-weight: 600;
+    color: orangered;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    /* get rid of underline with real links */
+}
+
+.nav-links a:hover {
+    color: orangered;
+}
+
+a.btn {
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 5px 8px;
+}
+
+a.btn-dark {
+    border: 2px solid #fff;
+    background: transparent;
+}
+
+a.btn-orange {
+    border: 2px solid transparent;
+    /* makes it stay same size */
+    background: orangered;
+    transition: all 0.2s;
+}
+
+a.btn-orange:hover {
+    color: #fff;
+    padding: 7px 10px;
+    /* creates size on hover */
+}
+
+/* Hide hamburger icon on desktop */
+.navbar .menu-icons {
+    display: none;
+}
+
+
+/* Media query to hide Get Started button on small screens */
+@media screen and (max-width: 769px) {
+    .nav-btn {
+        display: none;
+    }
+}
+
+/* Media query for mobile width */
+@media screen and (max-width: 600px) {
+    .nav-btn {
+        display: block;
+        /* show orange button */
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide top menu on mobile */
+    }
+
+    .navbar .menu-icons {
+        display: block;
+        /* shows hamburger menu */
+        z-index: 11;
+        /* place x icon on top */
+    }
+
+    /* Style links the same when shown and hidden, as well as nav wrapper div */
+    .navbar #mobile-nav-links,
+    .navbar #hide-mobile-nav-links,
+    .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 50%;
+        display: block;
+        background-color: rgba(0, 123, 255, 0.8);
+        padding: 2rem;
+        transition: all 0.3s;
+    }
+
+    .navbar #mobile-nav-links li,
+    .navbar #hide-mobile-nav-links li {
+        border-bottom: 1px solid #fff;
+        padding: 7px 0;
+        margin-left: 0;
+    }
+
+    /* Position nav menus */
+    .navbar #mobile-nav-links {
+        transform: translateX(0);
+    }
+
+    /* Take it off the page by 200% */
+    .navbar #hide-mobile-nav-links {
+        transform: translateX(200%);
+    }
+
+    .nav-wrapper {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        transform: translateX(-200%);
+        /* Take it out to the left initially */
+    }
+
+    .show-nav-wrapper {
+        transform: translateX(0);
+        /* Show it (black screen behind menu) */
+    }
+
+    /* Make button full width */
+    .btn {
+        display: block;
+        text-align: center;
+    }
+}
