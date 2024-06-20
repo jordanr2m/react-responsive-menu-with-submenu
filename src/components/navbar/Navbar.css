@@ -96,8 +96,34 @@ li.submenu-link {
 /* Keep styles for shown and hidden the same. Only difference is the position  */
 .navbar #submenu-nav-links,
 .navbar #hide-submenu-nav-links {
-
+    display: block; /* Make it a stacked list */
+    position: absolute;
+    left: 65%; /* aligns it under Settings link */
+    top: 6.5rem; /* Moves it under link */
+    border: 1px solid #fff;
+    transition: all 0.3s;
+    padding: 1.5rem;
+    text-align: center;
 }
+
+/* ===== POSITIONING for when open and hidden 
+    Commented first code block out. Instructor left it, but it's not needed
+===== */
+/* .navbar #submenu-nav-links {
+    top: 6.5rem;
+} */
+
+.navbar #hide-submenu-nav-links {
+    top: -26.5rem; /* Moves up off page */
+}
+
+.navbar #submenu-nav-links li,
+.navbar #hide-submenu-nav-links li {
+    border-bottom: 1px solid #fff;
+    padding: 1rem 0;
+    margin: 0;
+}
+
 
 
 /* Media query for mobile width */

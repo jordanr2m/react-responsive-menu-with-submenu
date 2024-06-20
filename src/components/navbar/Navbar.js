@@ -47,9 +47,9 @@ const Navbar = () => {
                 </ul>
 
                 {/* SUBMENU JSX */}
-                {/* SUBMENU JSX */}
+                {/* SUBMENU JSX. Checking if showSubmenu is true and assigning ids to show/hide the menu */}
                 <ul className='nav-links submenu' id={showSubmenu ? "submenu-nav-links" : "hide-submenu-nav-links"}>
-                    <li className='submenu-link'>
+                    <li className='submenu-link' onClick={() => setShowSubmenu(false)}>
                         <AiOutlineArrowLeft color="fff" size={18} />
                         <a href="#">Back to Menu</a>
                     </li>
