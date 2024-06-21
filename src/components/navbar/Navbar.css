@@ -161,12 +161,12 @@ li.submenu-link {
         background-color: rgba(0, 123, 255, 0.8);
         padding: 2rem;
         transition: all 0.3s;
-        /* text-align: left; */
     }
 
     .navbar #submenu-nav-links,
     .navbar #hide-submenu-nav-links {
         background-color: rgba(0, 123, 255, 1);
+        text-align: left;
     }
 
     /* Style SUBMENU the same */
@@ -208,4 +208,12 @@ li.submenu-link {
     }
 
     /* Positioning for SUBMENU */
+    /* Shown */
+    .navbar #submenu-nav-links {
+        transform: translateX(0);
+    }
+
+    .navbar #hide-submenu-nav-links {
+        transform: translateX(-200%);
+    }
 }
