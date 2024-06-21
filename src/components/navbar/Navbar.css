@@ -85,7 +85,7 @@ a.btn-orange:hover {
 li.submenu-link {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     cursor: pointer;
 }
 
@@ -146,9 +146,12 @@ li.submenu-link {
     }
 
     /* Style links the same when shown and hidden, as well as nav wrapper div */
+    /* Added styling for SUBMENU here as well */
     .navbar #mobile-nav-links,
     .navbar #hide-mobile-nav-links,
-    .nav-wrapper {
+    .nav-wrapper,
+    .navbar #submenu-nav-links,
+    .navbar #hide-submenu-nav-links {
         position: fixed;
         top: 0;
         left: 0;
@@ -158,10 +161,19 @@ li.submenu-link {
         background-color: rgba(0, 123, 255, 0.8);
         padding: 2rem;
         transition: all 0.3s;
+        /* text-align: left; */
     }
 
+    .navbar #submenu-nav-links,
+    .navbar #hide-submenu-nav-links {
+        background-color: rgba(0, 123, 255, 1);
+    }
+
+    /* Style SUBMENU the same */
     .navbar #mobile-nav-links li,
-    .navbar #hide-mobile-nav-links li {
+    .navbar #hide-mobile-nav-links li,
+    .navbar #submenu-nav-links li,
+    .navbar #hide-submenu-nav-links li {
         border-bottom: 1px solid #fff;
         padding: 7px 0;
         margin-left: 0;
@@ -194,4 +206,6 @@ li.submenu-link {
         display: block;
         text-align: center;
     }
+
+    /* Positioning for SUBMENU */
 }
