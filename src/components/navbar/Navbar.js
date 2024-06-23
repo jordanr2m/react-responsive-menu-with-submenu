@@ -18,6 +18,7 @@ const Navbar = () => {
     // Use this function to hide menu after a link is clicked
     const hideMenu = () => {
         setShowMenu(false);
+        setShowSubmenu(false); // hide submenu as well
     }
 
     return (
@@ -62,7 +63,8 @@ const Navbar = () => {
             {/* Div to hold hamburger icon and close icon. Use logic to see which icon to display & toggle on click */}
             <div className='menu-icons' onClick={toggleMenu}>
                 {showMenu ? (
-                    <RiCloseLine color="fff" size={27} />
+                    // Add hideMenu function to X icon so that it closes submenu as well
+                    <RiCloseLine color="fff" size={27} onClick={hideMenu}/>
                 ) : (
                     <AiOutlineBars color="fff" size={27} />
                 )}
